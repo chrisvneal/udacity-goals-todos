@@ -10,8 +10,8 @@ import { createStore } from "redux";
 const store = createStore(reducer, middleware);
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById("root")
 );
