@@ -1,6 +1,6 @@
 import checker from "./checker";
 import logger from "./logger";
-import thunk from "./redux-thunk";
-import { applyMidldeware } from "redux";
+import thunk from "redux-thunk";
+import { applyMiddleware } from "redux";
 
-export default applyMidldeware(thunk, checker, logger);
+export default applyMiddleware(thunk, checker, logger);
