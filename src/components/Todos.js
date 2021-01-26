@@ -1,13 +1,10 @@
 import React from "react";
 import List from "./List";
+import API from "goals-todos-api";
 
 import { connect } from "react-redux";
 
-import {
-  handleAddTodo,
-  handleDeleteTodo,
-  handleToggle,
-} from "../actions/todos";
+import { handleAddTodo, handleDeleteTodo, toggleTodo } from "../actions/todos";
 
 class Todos extends React.Component {
   addItem = (e) => {
@@ -27,12 +24,13 @@ class Todos extends React.Component {
   toggleItem = (id) => {
     // delete from database
 
-    this.props.dispatch(toggleTodoAction(id));
+    this.props.dispatch(toggleTodo(id));
     return API.saveTodoToggle(id).catch(() => {
-      this.props.dispatch(toggleTodoAction(id));
+      this.props.dispatch(toggleTodo(id));
       alert("An error occured. Try again");
     });
   };
+
   render() {
     return (
       <div>

@@ -1,4 +1,5 @@
 import API from "goals-todos-api";
+import store from "../index";
 
 export const RECEIVE_DATA = "RECEIVE_DATA";
 
