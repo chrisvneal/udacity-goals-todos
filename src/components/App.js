@@ -1,8 +1,8 @@
 import React from "react";
 import ConnectedTodos from "./Todos";
-import Goals from "./Goals";
+import ConnectedGoals from "./Goals";
 import { connect } from "react-redux";
-import { handleIntitalData } from "../actions/shared";
+import { handleInitialData } from "../actions/shared";
 
 class App extends React.Component {
   componentDidMount() {
